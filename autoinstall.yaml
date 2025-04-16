@@ -1,0 +1,26 @@
+#cloud-config
+autoinstall:
+    version: 1
+    identity:
+        realname: 'Bruno Ruggero'
+        hostname: ubuntu
+        username: broliveira
+        password: '$y$j9T$MScBFytKRhK42xhtc7iN/1$gUVC5qopierysfMNGWsCiKEXgyyNWjj9feTNetZqtx1'
+    locale: pt_BR.utf8
+    keyboard:
+        layout: br
+    timezone: "America/Sao_Paulo"   
+    packages:
+        - git
+        - wget
+    snaps:
+        - name: spotify
+          channel: stable
+          classic: false
+    codecs:
+        install: true
+    drivers:
+        install: true
+    updates: all
+    shutdown: reboot
+
